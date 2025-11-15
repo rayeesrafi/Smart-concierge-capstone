@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  coordinator:
+    build: ./services/coordinator
+    ports:
+      - 8000:8000
+    environment:
+      - SEARCH_AGENT_URL=http://search_agent:8001
+      - VALIDATION_AGENT_URL=http://validation_agent:8002
+      - BOOKING_AGENT_URL=http://booking_agent:8003
+  search_agent:
+    build: ./services/search_agent
+    ports:
+      - 8001:8001
+  validation_agent:
+    build: ./services/validation_agent
+    ports:
+      - 8002:8002
+  booking_agent:
+    build: ./services/booking_agent
+    ports:
+      - 8003:8003
