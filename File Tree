@@ -1,0 +1,35 @@
+smart-concierge/
+├─ README.md
+├─ LICENSE
+├─ requirements.txt
+├─ docker-compose.yml
+├─ .env.example
+├─ services/
+│  ├─ coordinator/
+│  │  ├─ Dockerfile
+│  │  ├─ app.py
+│  │  ├─ coordinator.py
+│  │  └─ llm_client.py
+│  ├─ search_agent/
+│  │  ├─ Dockerfile
+│  │  ├─ app.py
+│  │  └─ search_tools.py
+│  ├─ validation_agent/
+│  │  ├─ Dockerfile
+│  │  ├─ app.py
+│  │  └─ validator.py
+│  ├─ booking_agent/
+│  │  ├─ Dockerfile
+│  │  ├─ app.py
+│  │  └─ booking.py
+├─ memory/
+│  ├─ memory_store.py
+│  └─ embeddings.py
+├─ tools/
+│  ├─ price_compare.py
+│  └─ calendar_sync.py
+├─ tests/
+│  ├─ test_end_to_end.py
+│  └─ test_agents.py
+└─ notebooks/
+   └─ demo_playbook.ipynb
