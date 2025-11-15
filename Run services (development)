@@ -1,0 +1,13 @@
+# Coordinator
+cd services/coordinator
+uvicorn app:app --reload --port 8000
+
+# In other terminals, run search_agent, validation_agent, booking_agent
+cd services/search_agent
+uvicorn app:app --reload --port 8001
+
+cd services/validation_agent
+uvicorn app:app --reload --port 8002
+
+cd services/booking_agent
+uvicorn app:app --reload --port 8003
